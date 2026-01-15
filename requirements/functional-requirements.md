@@ -33,7 +33,3 @@ FR-06: Data Consistency
 FR-07: Error Handling
   The system shall display appropriate messages for invalid actions.
   The system shall handle unexpected errors without crashing.
-
-The system shall prevent checkout if the cart is empty.
-
-The system shall display order confirmation after successful checkout.
