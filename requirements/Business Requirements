@@ -1,2 +1,29 @@
-business requirements 
-update
+business requirements:
+
+BR-01: Product Browsing
+  The system should allow users to view a list of available products.
+  Users should be able to view details of a selected product.
+
+BR-02: Product Search and Categories
+  The system should allow users to search for products.
+  The system should allow users to view products by category.
+
+BR-03: User Login
+  The system should allow registered users to log in.
+  The system should prevent access to certain features without login.
+
+BR-04: Shopping Cart
+  The system should allow users to add products to a shopping cart.
+  Users should be able to view and manage items in the cart.
+
+BR-05: Checkout
+  The system should allow users to proceed to checkout with items in the cart.
+  The system should show order confirmation after checkout.
+
+BR-06: Error Handling
+  The system should display appropriate messages when an action fails.
+  The system should handle invalid inputs gracefully.
+
+
+
+
