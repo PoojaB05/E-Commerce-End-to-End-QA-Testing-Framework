@@ -2,9 +2,9 @@
 
 FR-01: Product Display
 
-  The system shall display a list of available products to users.
-  Each product shall show correct name, price, and category.
-  The system shall display detailed information when a product is selected.
+  1.The system shall display a list of available products to users.
+  2.Each product shall show correct name, price, and category.
+  3.The system shall display detailed information when a product is selected.
 
 FR-02: Product Search and Filtering
 
