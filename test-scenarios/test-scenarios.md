@@ -7,8 +7,8 @@
 **Description** Verify the system displays products that match the user’s search input.
 
 **TS-SF-02**
-**Title** Verify product filtering by category
-**Description** Verify the user can filter products by category and view only the filtered results.
+**Title:** Verify product filtering by category
+**Description:** Verify the user can filter products by category and view only the filtered results.
 
 **TS-SF-03**
 **Title** Verify message displayed when no products match search criteria
@@ -43,42 +43,45 @@
 **Description** Verify the system displays the correct total amount for items in the shopping cart.
 
 **TS-CART-04**
-**Title** Verify cart displays current selected products
-**Description** Verify the shopping cart displays all products currently added by the user.
+**Title:** 
+Verify cart displays current selected products
+**Description:** 
+Verify the shopping cart displays all products currently added by the user.
 
 ## CHECKOUT SCENARIOS
 
 **TS-CHK-01**
-**Title** Verify user can proceed to checkout with items in cart
-**Description** Verify the system allows checkout when the shopping cart contains items.
+**Title:** Verify user can proceed to checkout with items in cart
+**Description:** Verify the system allows checkout when the shopping cart contains items.
 
 **TS-CHK-02**
-**Title** Verify checkout is blocked when cart is empty
-**Description** Verify the system prevents checkout when the shopping cart is empty.
+**Title:** Verify checkout is blocked when cart is empty
+**Description:** Verify the system prevents checkout when the shopping cart is empty.
 
 **TS-CHK-03**
-**Title** Verify order confirmation after successful checkout
-**Description** Verify the system displays an order confirmation after a successful checkout.
+**Title:** Verify order confirmation after successful checkout
+**Description:** Verify the system displays an order confirmation after a successful checkout.
 
 ## DATA CONSISTENCY SCENARIOS
 
 **TS-DATA-01**
-**Title** Verify product price and quantity consistency across application
-**Description** Verify product prices and selected quantities remain consistent across product listing, cart, and checkout.
+**Title:** Verify product price and quantity consistency across application
+**Description:** Verify product prices and selected quantities remain consistent across product listing, cart, and checkout.
 
 **TS-DATA-02**
-**Title** Verify cart total matches individual product prices
-**Description** Verify the total cart amount equals the sum of individual product prices and quantities.
+**Title:** Verify cart total matches individual product prices
+**Description:** Verify the total cart amount equals the sum of individual product prices and quantities.
 
 
 ## ERROR HANDLING SCENARIOS
 
 **TS-ERR-01**
-**Title** Verify error message for invalid user actions
-**Description** Verify the system displays appropriate error messages for invalid user actions.
+**Title:** Verify error message for invalid user actions
+**Description:** Verify the system displays appropriate error messages for invalid user actions.
 
 **TS-ERR-02**
-**Title** Verify system stability during unexpected errors
-**Description** Verify the system handles unexpected errors gracefully without crashing.
+**Title:** Verify system stability during unexpected errors
+**Description:** Verify the system handles unexpected errors gracefully without crashing.
+
 
 
