@@ -3,12 +3,22 @@
 ## SEARCH & FILTER SCENARIOS
 
 **TS-SF-01**
+
+
 **Title** Verify product search returns matching results
+
+
 **Description** Verify the system displays products that match the user’s search input.
 
 **TS-SF-02**
+
+
 **Title:** Verify product filtering by category
+
+
 **Description:** Verify the user can filter products by category and view only the filtered results.
+
+
 
 **TS-SF-03**
 **Title** Verify message displayed when no products match search criteria
