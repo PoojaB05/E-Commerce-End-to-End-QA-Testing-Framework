@@ -85,19 +85,19 @@ README.md
 ## Sample Test Executions
 
 ### Postman Collection Overview
-![Collection](screenshots/postman/collection_overview.png)
+![Collection](screenshots/Postman/Collection_Overview.png)
 
 ### Authentication Success
-![Auth](screenshots/postman/auth_success.png)
+![Auth](screenshots/Postman/Auth_Success.png)
 
 ### Cart Creation
-![Cart](screenshots/postman/cart_created.png)
+![Cart](screenshots/Postman/Cart_API.png)
 
 ### Edge Case Validation
-![Edge](screenshots/postman/edge_quantity.png)
+![Edge](screenshots/Postman/Cart_API_Edge_Case.png)
 
 ### Order Creation
-![Order](screenshots/postman/order_created.png)
+![Order](screenshots/Postman/Order_API.png)
 
 ---
 
