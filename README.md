@@ -79,5 +79,4 @@ The repository is organized to mirror a real-world QA lifecycle:
 
 ## Author
 Pooja Bankar  
-ISTQB Certified QA Engineer  
-Manual & Automation Testing | API | SQL | Agile
+ISTQB Certified | Manual & Automation Testing | API | SQL | Agile
