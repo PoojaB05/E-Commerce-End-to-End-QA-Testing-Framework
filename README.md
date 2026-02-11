@@ -23,6 +23,15 @@ The project is structured to be scalable, allowing future expansion into automat
 - Frontend: API-driven demo e-commerce UI
 - Database: Logical SQL validation aligned with API responses
 
+## UI Testing Approach
+
+DummyJSON provides backend APIs and does not offer a dedicated production-grade frontend UI.
+
+For this project, UI test cases were designed based on standard e-commerce user workflows and how a typical frontend would consume these APIs.
+
+This approach was used to demonstrate test design skills and user-centric validation in the absence of a full UI implementation.
+
+
 ---
 
 ## Testing Artifacts
