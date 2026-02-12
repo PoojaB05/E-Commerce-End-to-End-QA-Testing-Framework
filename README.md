@@ -35,7 +35,7 @@ This approach was used to demonstrate test design skills and user-centric valida
 ---
 
 ## Testing Artifacts
-- Requirements: Functional requirements derived from business expectations
+- Requirements: Functional requirements derived from high level business expectations.
 - Test Scenarios: High-level scenarios mapped to requirements
 - Test Cases:
   - API testing
