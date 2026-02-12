@@ -1,4 +1,4 @@
-# E-Commerce End-to-End QA Testing Portfolio
+# E-Commerce End-to-End QA Testing 
 
 ## Project Overview
 This project demonstrates a complete end-to-end Quality Assurance workflow for a sample e-commerce application.
@@ -64,10 +64,14 @@ test-scenarios/
 test-plan/
 
 test-cases/
-├── api/
-├── ui/
-├── sql/
-└── excel/
+
+  api
+    
+  ui
+  
+  sql
+  
+  excel
 
 postman/
 
