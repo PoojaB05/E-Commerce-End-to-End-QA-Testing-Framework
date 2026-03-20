@@ -1,0 +1,628 @@
+{
+  "info": {
+    "_postman_id": "61630275-e99a-4fac-9060-2efda72dff74",
+    "name": "E-Commerce API – Manual Testing (DummyJSON)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "22122477"
+  },
+  "item": [
+    {
+      "name": "1_Auth",
+      "item": [
+        {
+          "name": "Login_Valid_User",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Login successful\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"emilys\",\r\n  \"password\": \"emilyspass\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login_Invalid_User",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Login failed for invalid credentials\", function () {\r",
+                  "    pm.response.to.have.status(400);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"Incorrectuser\",\r\n  \"password\": \"Incorrectpass\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "2_Products",
+      "item": [
+        {
+          "name": "Get_All_Products",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Get all products - Status 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get_product_by_valid_Id",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Get product by ID - Status 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get_product_by_invalid_id",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Invalid product ID - return 404 not found\", function () {\r",
+                  "    pm.response.to.have.status(404);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products/99999999999999",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                "99999999999999"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search_Product",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Search products - Status 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products/search?q=phone",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "phone"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search_Empty_Query",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Empty search handled properly\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products/search?q=",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "3_Cart",
+      "item": [
+        {
+          "name": "Add_Product_to_cart",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Product added to cart\", function () {\r",
+                  "        pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": 1,\r\n  \"products\": [\r\n    {\r\n      \"id\": 1,\r\n      \"quantity\": 2\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/carts/add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "carts",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add_Product_to_cart_with_Quantity_zero",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Zero quantity defaults to minimum 1\", function () {\r",
+                  "    pm.expect(pm.response.code).to.be.oneOf([201,200]);\r",
+                  "\r",
+                  "    var jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData.totalQuantity).to.eql(1);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": 1,\r\n  \"products\": [\r\n    {\r\n      \"id\": 1,\r\n      \"quantity\": 0\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/carts/add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "carts",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add_Invalid_Product_to_cart",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Invalid product ID handling (known limitation)\", function () {\r",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200,201,400,404]);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": 1,\r\n  \"products\": [\r\n    {\r\n      \"id\": 99999,\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/carts/add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "carts",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get_User_Cart",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Get user cart - Status 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/carts/user/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "carts",
+                "user",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update_Cart",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Cart updated successfully\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"merge\": true,\r\n  \"products\": [\r\n    {\r\n      \"id\": 1,\r\n      \"quantity\": 3\r\n    }\r\n  ]\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/carts/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "carts",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "4_Order",
+      "item": [
+        {
+          "name": "Create_Order",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Order created successfully\", function () {\r",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": 1,\r\n  \"products\": [\r\n    {\r\n      \"id\": 2,\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/carts/add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "carts",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get_User_Orders",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"User orders retrieved\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/carts/user/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "carts",
+                "user",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Checkout_Empty_Cart",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Empty cart checkout handled\", function () {\r",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200,400]);\r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": 1,\r\n  \"products\": []\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/carts/add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "carts",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
