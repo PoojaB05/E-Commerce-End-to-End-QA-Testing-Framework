@@ -3,6 +3,7 @@
 ## Project Overview
 This project demonstrates a complete end-to-end Quality Assurance workflow for a sample e-commerce application.
 It covers requirements analysis, test scenario design, test case creation, and manual testing across API, UI, and database layers, following industry-aligned SDLC and STLC practices.
+Although this is a personal project, I intentionally practiced troubleshooting scenarios to simulate how QA engineers debug issues in real-world environments.
 
 The project is structured to be scalable, allowing future expansion into automation and CI/CD pipelines.
 
